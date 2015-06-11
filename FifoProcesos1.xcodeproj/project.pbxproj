@@ -14,6 +14,10 @@
 		3204A9641B29B339003D968C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3204A9631B29B339003D968C /* Images.xcassets */; };
 		3204A9671B29B339003D968C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3204A9651B29B339003D968C /* LaunchScreen.xib */; };
 		3204A9731B29B339003D968C /* FifoProcesos1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A9721B29B339003D968C /* FifoProcesos1Tests.m */; };
+		3204A9811B29B384003D968C /* Fifo1Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A97E1B29B384003D968C /* Fifo1Item.m */; };
+		3204A9821B29B384003D968C /* Fifo1ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A9801B29B384003D968C /* Fifo1ItemStore.m */; };
+		3204A9871B29B3E3003D968C /* Fifo1DetalleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A9841B29B3E3003D968C /* Fifo1DetalleTableViewController.m */; };
+		3204A9881B29B3E3003D968C /* Fifo1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A9861B29B3E3003D968C /* Fifo1TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		3204A96C1B29B339003D968C /* FifoProcesos1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifoProcesos1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3204A9711B29B339003D968C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3204A9721B29B339003D968C /* FifoProcesos1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FifoProcesos1Tests.m; sourceTree = "<group>"; };
+		3204A97D1B29B384003D968C /* Fifo1Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fifo1Item.h; sourceTree = "<group>"; };
+		3204A97E1B29B384003D968C /* Fifo1Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fifo1Item.m; sourceTree = "<group>"; };
+		3204A97F1B29B384003D968C /* Fifo1ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fifo1ItemStore.h; sourceTree = "<group>"; };
+		3204A9801B29B384003D968C /* Fifo1ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fifo1ItemStore.m; sourceTree = "<group>"; };
+		3204A9831B29B3E3003D968C /* Fifo1DetalleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fifo1DetalleTableViewController.h; sourceTree = "<group>"; };
+		3204A9841B29B3E3003D968C /* Fifo1DetalleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fifo1DetalleTableViewController.m; sourceTree = "<group>"; };
+		3204A9851B29B3E3003D968C /* Fifo1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fifo1TableViewController.h; sourceTree = "<group>"; };
+		3204A9861B29B3E3003D968C /* Fifo1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fifo1TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +97,14 @@
 				3204A95B1B29B339003D968C /* AppDelegate.m */,
 				3204A95D1B29B339003D968C /* ViewController.h */,
 				3204A95E1B29B339003D968C /* ViewController.m */,
+				3204A9831B29B3E3003D968C /* Fifo1DetalleTableViewController.h */,
+				3204A9841B29B3E3003D968C /* Fifo1DetalleTableViewController.m */,
+				3204A9851B29B3E3003D968C /* Fifo1TableViewController.h */,
+				3204A9861B29B3E3003D968C /* Fifo1TableViewController.m */,
 				3204A9601B29B339003D968C /* Main.storyboard */,
 				3204A9631B29B339003D968C /* Images.xcassets */,
 				3204A9651B29B339003D968C /* LaunchScreen.xib */,
+				3204A97C1B29B384003D968C /* Model */,
 				3204A9561B29B339003D968C /* Supporting Files */,
 			);
 			path = FifoProcesos1;
@@ -117,6 +134,17 @@
 				3204A9711B29B339003D968C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3204A97C1B29B384003D968C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3204A97D1B29B384003D968C /* Fifo1Item.h */,
+				3204A97E1B29B384003D968C /* Fifo1Item.m */,
+				3204A97F1B29B384003D968C /* Fifo1ItemStore.h */,
+				3204A9801B29B384003D968C /* Fifo1ItemStore.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3204A9821B29B384003D968C /* Fifo1ItemStore.m in Sources */,
 				3204A95F1B29B339003D968C /* ViewController.m in Sources */,
 				3204A95C1B29B339003D968C /* AppDelegate.m in Sources */,
+				3204A9881B29B3E3003D968C /* Fifo1TableViewController.m in Sources */,
+				3204A9871B29B3E3003D968C /* Fifo1DetalleTableViewController.m in Sources */,
+				3204A9811B29B384003D968C /* Fifo1Item.m in Sources */,
 				3204A9591B29B339003D968C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
