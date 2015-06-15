@@ -9,22 +9,21 @@
 #import "Fifo1Item.h"
 
 @implementation Fifo1Item
-@synthesize titulo, llegada, tiempo, arranque;
 
--(void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:titulo forKey:@"titulo"];
-    [aCoder encodeObject:llegada forKey:@"llegada"];
-    [aCoder encodeObject:tiempo forKey:@"tiempo"];
-    [aCoder encodeObject:arranque forKey:@"arranque"];
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.titulo forKey:@"titulo"];
+    [aCoder encodeObject:self.llegada forKey:@"llegada"];
+    [aCoder encodeObject:self.tiempo forKey:@"tiempo"];
+    [aCoder encodeObject:self.arranque forKey:@"arranque"];
 }
 
--(id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self){
-        [self setTitulo:[aDecoder decodeObjectForKey:@"titulo"]];
-        [self setLlegada:[aDecoder decodeObjectForKey:@"llegada"]];
-        [self setTiempo:[aDecoder decodeObjectForKey:@"tiempo"]];
-        [self setArranque:[aDecoder decodeObjectForKey:@"arranque"]];
+        self.titulo = [aDecoder decodeObjectForKey:@"titulo"];
+        self.llegada = [aDecoder decodeObjectForKey:@"llegada"];
+        self.tiempo = [aDecoder decodeObjectForKey:@"tiempo"];
+        self.arranque = [aDecoder decodeObjectForKey:@"arranque"];
     }
     return self;
 }

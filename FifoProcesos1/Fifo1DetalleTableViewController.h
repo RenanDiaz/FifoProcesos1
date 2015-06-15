@@ -11,6 +11,6 @@
 #import "Fifo1ItemStore.h"
 
 @interface Fifo1DetalleTableViewController : UITableViewController
-@property (weak, nonatomic) IBOutlet Fifo1Item *itemSeleccionado;
+@property (weak, nonatomic) Fifo1Item *itemSeleccionado;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 @end

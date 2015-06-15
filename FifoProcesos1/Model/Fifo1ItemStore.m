@@ -9,67 +9,81 @@
 #import "Fifo1ItemStore.h"
 
 @implementation Fifo1ItemStore
-+ (Fifo1ItemStore *)sharedStore {
+
++ (Fifo1ItemStore *)sharedStore
+{
     static Fifo1ItemStore *sharedStore = nil;
-    if (!sharedStore) {
+    if (!sharedStore)
+    {
         sharedStore = [[super allocWithZone:nil] init];
     }
     return sharedStore;
 }
 
-+(id)allocWithZone:(NSZone *)zone {
-    return [self sharedStore];
++(id)allocWithZone:(NSZone *)zone
+{
+    return self.sharedStore;
 }
 
--(id)init {
+- (id)init
+{
     self = [super init];
-    if (self) {
-        NSString *path = [self itemArchivePath];
+    if (self)
+    {
+        NSString *path = self.itemArchivePath;
         items = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-        if (!items){
+        if (!items)
+        {
             items = [[NSMutableArray alloc] init];
         }
     }
     return self;
 }
 
-- (NSArray *)allItems {
+- (NSArray *)allItems
+{
     return items;
 }
 
--(Fifo1Item *)insertItem {
+- (Fifo1Item *)insertItem
+{
     Fifo1Item *item = [[Fifo1Item alloc] init];
     [items addObject:item];
     return item;
 }
 
--(void)deleteItem:(Fifo1Item *)item
+- (void)deleteItem:(Fifo1Item *)item
 {
     [items removeObjectIdenticalTo:item];
-
 }
 
--(void)changeOrderFrom:(NSInteger)from To:(NSInteger)to
+- (void)changeOrderFrom:(NSInteger)from to:(NSInteger)to
 {
-    if (to != from) {
+    if (to != from)
+    {
         id obj = [items objectAtIndex:from];
         [items removeObjectAtIndex:from];
-        if (to <= [items count]) {
+        if (to <= [items count])
+        {
             [items addObject:obj];
-        } else {
+        }
+        else
+        {
             [items insertObject:obj atIndex:to];
         }
     }
 }
 
--(NSString *)itemArchivePath {
+- (NSString *)itemArchivePath
+{
     NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [documentDirectories objectAtIndex:0];
     return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
 }
 
--(BOOL)saveChanges {
-    NSString *path = [self itemArchivePath];
+- (BOOL)saveChanges
+{
+    NSString *path = self.itemArchivePath;
     return [NSKeyedArchiver archiveRootObject:items toFile:path];
 }
 

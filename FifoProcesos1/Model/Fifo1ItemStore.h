@@ -18,10 +18,10 @@
 + (Fifo1ItemStore *)sharedStore;
 - (NSArray *)allItems;
 
--(Fifo1Item *)insertItem;
+- (Fifo1Item *)insertItem;
 
 - (void)deleteItem:(Fifo1Item *)item;
-- (void)changeOrderFrom:(NSInteger)from To:(NSInteger)to;
+- (void)changeOrderFrom:(NSInteger)from to:(NSInteger)to;
 
 - (BOOL)saveChanges;
 @end

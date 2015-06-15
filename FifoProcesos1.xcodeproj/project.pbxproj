@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3204A9591B29B339003D968C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A9581B29B339003D968C /* main.m */; };
 		3204A95C1B29B339003D968C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A95B1B29B339003D968C /* AppDelegate.m */; };
-		3204A95F1B29B339003D968C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3204A95E1B29B339003D968C /* ViewController.m */; };
 		3204A9621B29B339003D968C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3204A9601B29B339003D968C /* Main.storyboard */; };
 		3204A9641B29B339003D968C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3204A9631B29B339003D968C /* Images.xcassets */; };
 		3204A9671B29B339003D968C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3204A9651B29B339003D968C /* LaunchScreen.xib */; };
@@ -36,8 +35,6 @@
 		3204A9581B29B339003D968C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3204A95A1B29B339003D968C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3204A95B1B29B339003D968C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3204A95D1B29B339003D968C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3204A95E1B29B339003D968C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3204A9611B29B339003D968C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3204A9631B29B339003D968C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3204A9661B29B339003D968C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -93,10 +90,6 @@
 		3204A9551B29B339003D968C /* FifoProcesos1 */ = {
 			isa = PBXGroup;
 			children = (
-				3204A95A1B29B339003D968C /* AppDelegate.h */,
-				3204A95B1B29B339003D968C /* AppDelegate.m */,
-				3204A95D1B29B339003D968C /* ViewController.h */,
-				3204A95E1B29B339003D968C /* ViewController.m */,
 				3204A9831B29B3E3003D968C /* Fifo1DetalleTableViewController.h */,
 				3204A9841B29B3E3003D968C /* Fifo1DetalleTableViewController.m */,
 				3204A9851B29B3E3003D968C /* Fifo1TableViewController.h */,
@@ -113,6 +106,8 @@
 		3204A9561B29B339003D968C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3204A95A1B29B339003D968C /* AppDelegate.h */,
+				3204A95B1B29B339003D968C /* AppDelegate.m */,
 				3204A9571B29B339003D968C /* Info.plist */,
 				3204A9581B29B339003D968C /* main.m */,
 			);
@@ -196,6 +191,7 @@
 				TargetAttributes = {
 					3204A9521B29B339003D968C = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = W5SWU29W6D;
 					};
 					3204A96B1B29B339003D968C = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -248,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3204A9821B29B384003D968C /* Fifo1ItemStore.m in Sources */,
-				3204A95F1B29B339003D968C /* ViewController.m in Sources */,
 				3204A95C1B29B339003D968C /* AppDelegate.m in Sources */,
 				3204A9881B29B3E3003D968C /* Fifo1TableViewController.m in Sources */,
 				3204A9871B29B3E3003D968C /* Fifo1DetalleTableViewController.m in Sources */,
@@ -381,9 +376,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FifoProcesos1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -391,9 +390,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FifoProcesos1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -450,6 +453,7 @@
 				3204A9781B29B339003D968C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3204A9791B29B339003D968C /* Build configuration list for PBXNativeTarget "FifoProcesos1Tests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +462,7 @@
 				3204A97B1B29B339003D968C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
